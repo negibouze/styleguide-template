@@ -6,7 +6,7 @@ import sort from 'gulp-sort';
 const definitions = [
   {
     target: `${__dirname}/src/main.js`,
-    imports: [`${__dirname}/src/components/**/!(_|detail)*.tag`],
+    imports: [`${__dirname}/src/components/**/!(_)*.tag`],
     ext: 'tag',
     transform: (filepath) => {
       return `import './${filepath}';`;
@@ -14,7 +14,7 @@ const definitions = [
   },
   {
     target: `${__dirname}/src/main.styl`,
-    imports: [`${__dirname}/src/components/**/!(_|list|category)*.styl`],
+    imports: [`${__dirname}/src/components/**/!(_)*.styl`],
     ext: 'styl',
     transform: (filepath) => {
       const newPath = filepath.replace(`.styl`, '');
