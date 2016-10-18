@@ -23,7 +23,8 @@ module.exports = {
     ],
     loaders: [
       { test: /\.js$|\.tag$/, exclude: /node_modules/, loader: 'babel' },
-      { test: /\.css$|\.styl$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract('style', 'css!postcss!stylus') }
+      { test: /\.css$|\.styl$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract('style', 'css!postcss!stylus') },
+      { test: /\.svg$/, exclude: /node_modules/, loader: 'file?name=[name].[ext]' }
     ]
   },
   postcss: () => {

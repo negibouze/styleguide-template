@@ -1,5 +1,8 @@
 /* inject:tag */
-/* endinject */
+/* endinject:tag */
+
+/* inject:svg */
+/* endinject:svg */
 
 import './main.styl';
 
