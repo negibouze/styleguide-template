@@ -1,0 +1,45 @@
+{
+  "name": "styleguide-template",
+  "version": "0.0.1",
+  "description": "Template of the style guide of Riot.js + Atomic Design",
+  "main": "main.js",
+  "scripts": {
+    "gulp": "gulp",
+    "wp": "webpack -w",
+    "lite": "lite-server",
+    "start": "npm-run-all -s gulp -p lite wp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/negibouze/styleguide-template.git"
+  },
+  "keywords": [
+    "Atomic Design",
+    "Riot"
+  ],
+  "author": "Yoshiaki Itakura (https://github.com/negibouze)",
+  "license": "MIT",
+  "dependencies": {
+    "riot": "^2.6.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015-riot": "^1.1.0",
+    "css-loader": "^0.25.0",
+    "event-stream": "^3.3.4",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-sort": "^2.0.0",
+    "lite-server": "^2.2.2",
+    "npm-run-all": "^3.1.1",
+    "postcss-loader": "^1.0.0",
+    "riotjs-loader": "^3.0.0",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.3.1",
+    "webpack": "^1.13.2"
+  }
+}

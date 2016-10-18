@@ -1,0 +1,3 @@
+<molecules>
+  <bar></bar>
+</molecules>

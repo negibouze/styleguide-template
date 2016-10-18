@@ -1,0 +1,3 @@
+<atoms>
+  <foo></foo>
+</atoms>

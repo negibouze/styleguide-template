@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Style Guide</title>
+    <link rel="stylesheet" href="./public/bundle.css">
+  </head>
+  <body>
+    <div class="header"><span class="title">Style Guide</span></div>
+    <div class="navbar_container">
+      <ul class="navbar">
+        <li class="navbar_item" onclick="openPage(event, 'atoms')">Atoms</li>
+        <li class="navbar_item" onclick="openPage(event, 'moleules')">Moleules</li>
+        <li class="navbar_item" onclick="openPage(event, 'organisms')">Organisms</li>
+      </ul>
+    </div>
+    <div id="atoms" class="page">
+      <atoms></atoms>
+    </div>
+    <div id="moleules" class="page">
+      <molecules></molecules>
+    </div>
+    <div id="organisms" class="page">
+      <organisms></organisms>
+    </div>
+
+    <script src="./public/bundle.js"></script>
+    <script type="text/javascript">
+    const elements = (className) => {
+      return document.getElementsByClassName(className);
+    }
+    const each = (className, fn) => {
+      Array.prototype.forEach.call(elements(className), fn);
+    };
+    const openPage = (ev, pageName) => {
+      each('page', (e) => e.style.display = 'none');
+      each('navbar_item', (e) => e.className = e.className.replace(' selected', ''));
+      document.getElementById(pageName).style.display = 'block';
+      ev.currentTarget.className += ' selected';
+    }
+    elements('navbar_item')[0].click();
+    </script>
+  </body>
+</html>

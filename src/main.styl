@@ -1,0 +1,56 @@
+/* inject:styl */
+/* endinject */
+
+flexbox(direction, justifyContent = flex-start)
+  display flex
+  flex-direction direction
+  flex-wrap nowrap
+  justify-content justifyContent
+
+html
+body
+  margin 0
+  padding 0
+
+.header
+  width 100vw
+  height 40px
+  background-color #522a82
+
+.title
+  margin-left 10px
+  color #fff
+  font normal 1.2em/40px "メイリオ",sans-serif
+
+.navbar_container
+  width 100vw
+  height 30px
+  border-top solid 1px #c8c8c8
+  border-bottom solid 1px #c8c8c8
+
+.navbar
+  padding 0 0 14px 0
+  margin 0
+  list-style none
+  overflow-x auto
+  overflow-y hidden
+  flexbox row
+
+.navbar_item
+  padding 0
+  min-width 160px
+  height 100%
+  margin 0
+  background-color #fff
+  color #000
+  font bold 0.8em/30px "メイリオ",sans-serif
+  text-align center
+  cursor pointer
+
+ul.navbar > li:hover
+  background-color #c8c8c8
+  color #000
+
+ul.navbar > li.selected
+  background-color #c8c8c8
+  color #000
