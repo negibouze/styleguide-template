@@ -1,3 +1,3 @@
 <organisms>
-  
+  <baz></baz>
 </organisms>
