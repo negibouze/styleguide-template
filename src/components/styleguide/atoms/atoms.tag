@@ -1,3 +1,14 @@
 <atoms>
-  <foo></foo>
+  <section>
+    <h3><span>Foo</span></h3>
+    <div>
+      <foo-exam></foo-exam>
+    </div>
+  </section>
+  <section>
+    <h3><span>Icon</span></h3>
+    <div>
+      <plus-exam></plus-exam>
+    </div>
+  </section>
 </atoms>

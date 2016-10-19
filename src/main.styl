@@ -9,6 +9,8 @@ flexbox(direction, justifyContent = flex-start)
 
 html
 body
+  width 100vw
+  height 100vh
   margin 0
   padding 0
 
@@ -29,7 +31,7 @@ body
   border-bottom solid 1px #c8c8c8
 
 .navbar
-  padding 0 0 14px 0
+  padding 0
   margin 0
   list-style none
   overflow-x auto
@@ -54,3 +56,6 @@ ul.navbar > li:hover
 ul.navbar > li.selected
   background-color #c8c8c8
   color #000
+
+.page
+  height calc(100vh - 70px)

@@ -5,9 +5,11 @@
   "main": "main.js",
   "scripts": {
     "gulp": "gulp",
-    "wp": "webpack -w",
+    "wp": "webpack",
+    "wp:w": "webpack -w",
     "lite": "lite-server",
-    "start": "npm-run-all -s gulp -p lite wp"
+    "comp": "npm-run-all -s gulp wp",
+    "start": "npm-run-all -s gulp -p lite wp:w"
   },
   "repository": {
     "type": "git",
