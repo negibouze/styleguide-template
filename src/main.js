@@ -6,4 +6,6 @@
 
 import './main.styl';
 
-riot.mount('*');
+riot.mount('atoms');
+riot.mount('molecules');
+riot.mount('organisms');

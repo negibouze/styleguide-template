@@ -2,6 +2,7 @@
   <section>
     <h3><span>Baz</span></h3>
     <div>
+      <h5>baz</h5>
       <baz-exam></baz-exam>
     </div>
   </section>
