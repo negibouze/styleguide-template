@@ -1,10 +1,4 @@
 /* inject:styl */
-@import 'components/atoms/foo/foo';
-@import 'components/molecules/bar/bar';
-@import 'components/organisms/baz/baz';
-@import 'components/styleguide/atoms/atoms';
-@import 'components/styleguide/molecules/molecules';
-@import 'components/styleguide/organisms/organisms';
 /* endinject:styl */
 
 flexbox(direction, justifyContent = flex-start)
@@ -25,10 +19,10 @@ body
   height 40px
   background-color #522a82
 
-.title
-  margin-left 10px
-  color #fff
-  font normal 1.2em/40px "メイリオ",sans-serif
+  > .title
+    margin-left 10px
+    color #fff
+    font normal 1.2em/40px "メイリオ",sans-serif
 
 .navbar_container
   width 100vw
@@ -36,32 +30,29 @@ body
   border-top solid 1px #c8c8c8
   border-bottom solid 1px #c8c8c8
 
-.navbar
-  padding 0
-  margin 0
-  list-style none
-  overflow-x auto
-  overflow-y hidden
-  flexbox row
+  > .navbar
+    padding 0
+    margin 0
+    list-style none
+    overflow-x auto
+    overflow-y hidden
+    flexbox row
 
-.navbar_item
-  padding 0
-  min-width 160px
-  height 100%
-  margin 0
-  background-color #fff
-  color #000
-  font bold 0.8em/30px "メイリオ",sans-serif
-  text-align center
-  cursor pointer
+    > .navbar_item
+      padding 0
+      min-width 160px
+      height 100%
+      margin 0
+      background-color #fff
+      color #000
+      font bold 0.8em/30px "メイリオ",sans-serif
+      text-align center
+      cursor pointer
 
-ul.navbar > li:hover
-  background-color #c8c8c8
-  color #000
+      &:hover
+      &.selected
+        background-color #c8c8c8
+        color #000
 
-ul.navbar > li.selected
-  background-color #c8c8c8
-  color #000
-
-.page
+body div.page
   height calc(100vh - 70px)
