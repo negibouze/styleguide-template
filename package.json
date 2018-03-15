@@ -25,24 +25,24 @@
     "riot": "^2.6.4"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.1",
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.5",
+    "autoprefixer": "^7.1.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
     "babel-preset-es2015-riot": "^1.1.0",
-    "css-loader": "^0.25.0",
+    "css-loader": "^0.28.10",
     "event-stream": "^3.3.4",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
     "gulp": "^3.9.1",
-    "gulp-inject": "^4.1.0",
+    "gulp-inject": "^4.3.1",
     "gulp-sort": "^2.0.0",
-    "lite-server": "^2.2.2",
-    "npm-run-all": "^3.1.1",
-    "postcss-loader": "^1.0.0",
-    "riotjs-loader": "^3.0.0",
-    "style-loader": "^0.13.1",
+    "lite-server": "^2.3.0",
+    "npm-run-all": "^4.1.2",
+    "postcss-loader": "^2.1.1",
+    "riotjs-loader": "^4.0.0",
+    "style-loader": "^0.20.3",
     "stylus": "^0.54.5",
-    "stylus-loader": "^2.3.1",
-    "webpack": "^1.13.2"
+    "stylus-loader": "^3.0.2",
+    "webpack": "^2.6.1"
   }
 }
