@@ -1,12 +1,12 @@
 {
   "name": "styleguide-template",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Template of the style guide of Riot.js + Atomic Design",
   "main": "main.js",
   "scripts": {
     "gulp": "gulp",
-    "wp": "webpack",
-    "wp:w": "webpack -w",
+    "wp": "webpack --mode production",
+    "wp:w": "webpack -w --mode development",
     "lite": "lite-server",
     "comp": "npm-run-all -s gulp wp",
     "start": "npm-run-all -s gulp -p lite wp:w"
@@ -22,17 +22,17 @@
   "author": "Yoshiaki Itakura (https://github.com/negibouze)",
   "license": "MIT",
   "dependencies": {
-    "riot": "^2.6.4"
+    "riot": "^3.9.0"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
+    "autoprefixer": "^8.1.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-es2015-riot": "^1.1.0",
     "css-loader": "^0.28.10",
     "event-stream": "^3.3.4",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "file-loader": "^0.11.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
     "gulp": "^3.9.1",
     "gulp-inject": "^4.3.1",
     "gulp-sort": "^2.0.0",
@@ -43,6 +43,8 @@
     "style-loader": "^0.20.3",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
-    "webpack": "^2.6.1"
+    "uglifyjs-webpack-plugin": "^1.2.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
   }
 }

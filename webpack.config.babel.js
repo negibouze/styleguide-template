@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import autoprefixer from 'autoprefixer';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 
 module.exports = {
   entry: './src/main.js',
@@ -11,18 +12,17 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('bundle.css'),
-    new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.ProvidePlugin({ riot: 'riot' })
   ],
   module: {
     rules: [
-      { test: /\.tag$/, enforce: 'pre', exclude: /node_modules/, loader: 'riotjs-loader', options: { type: 'babel' } },
-      { test: /\.js$|\.tag$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.tag$/, enforce: 'pre', exclude: /node_modules/, use: [ { loader: 'riotjs-loader', options: { type: 'babel' } }]},
+      { test: /\.js$|\.tag$/, exclude: /node_modules/, use: 'babel-loader' },
       { test: /\.css$|\.styl$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract({
+        use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
             'css-loader',
@@ -37,10 +37,30 @@ module.exports = {
               }
             },
             'stylus-loader'] }) },
-      { test: /\.svg$/, exclude: /node_modules/, loader: 'file-loader?name=[name].[ext]' }
+      { test: /\.svg$/, exclude: /node_modules/, use: 'file-loader?name=[name].[ext]' }
     ]
   },
   resolve: {
     extensions: ['*', '.js', '.tag', '.styl']
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: { test: /[\\/]node_modules[\\/]/, name: 'vendors', chunks: 'all' }
+      }
+    },
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        uglifyOptions: {
+          compress: {
+            drop_console: true,
+            ecma: 6
+          },
+          mangle: true
+        }
+      })
+    ]    
   }
 }
